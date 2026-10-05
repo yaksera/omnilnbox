@@ -1,0 +1,54 @@
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: omni
+      POSTGRES_USER: omni
+      POSTGRES_PASSWORD: omni
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  # Shared cache: instant updates and rate limits across all processes
+  redis:
+    image: redis:7-alpine
+
+  backend:
+    build: ./backend
+    env_file: ./backend/.env
+    environment:
+      DATABASE_URL: postgres://omni:omni@db:5432/omni
+      REDIS_URL: redis://redis:6379/0
+    ports:
+      - "8000:8000"
+    depends_on: [db, redis]
+
+  # Polls Gmail / Zoho / IMAP / Outlook and Telegram (polling mode)
+  worker:
+    build: ./backend
+    env_file: ./backend/.env
+    environment:
+      DATABASE_URL: postgres://omni:omni@db:5432/omni
+      REDIS_URL: redis://redis:6379/0
+    command: sh -c "sleep 5 && python manage.py run_worker"
+    depends_on: [backend]
+
+  # Keeps Discord Gateway connections open
+  discord:
+    build: ./backend
+    env_file: ./backend/.env
+    environment:
+      DATABASE_URL: postgres://omni:omni@db:5432/omni
+    command: sh -c "sleep 5 && python manage.py run_discord"
+    depends_on: [backend]
+
+  frontend:
+    build:
+      context: ./frontend
+      args:
+        BACKEND_URL: http://backend:8000
+    ports:
+      - "3000:3000"
+    depends_on: [backend]
+
+volumes:
+  pgdata:

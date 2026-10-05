@@ -1,0 +1,19 @@
+Django>=5.2,<5.3
+djangorestframework>=3.15
+djangorestframework-simplejwt>=5.3
+django-cors-headers>=4.4
+django-filter>=24.2
+dj-database-url>=2.2
+cryptography>=42
+requests>=2.32
+psycopg[binary]>=3.2
+gunicorn>=22
+# Only needed for the Discord gateway worker (python manage.py run_discord)
+discord.py>=2.4
+qrcode>=7.4
+# Instant updates across several server processes (set REDIS_URL); also used for rate limits
+redis>=5.0
+# Voice notes: converts browser recordings to WhatsApp/Telegram voice format (bundles its own ffmpeg)
+imageio-ffmpeg>=0.5
+# Reading uploaded PDFs into the AI knowledge base
+pypdf>=4.2

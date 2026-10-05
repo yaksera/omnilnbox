@@ -1,0 +1,62 @@
+# ---------------------------------------------------------------- secrets (never commit)
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+id_rsa*
+credentials*.json
+service-account*.json
+secrets/
+
+# ---------------------------------------------------------------- data & uploads (customer data)
+*.sqlite3
+*.sqlite3-journal
+*.db
+backend/media/
+media/
+backups/
+*.dump
+*.sql.gz
+
+# ---------------------------------------------------------------- Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+staticfiles/
+*.egg-info/
+
+# ---------------------------------------------------------------- Node / Next.js
+node_modules/
+.next/
+out/
+build/
+coverage/
+*.tsbuildinfo
+next-env.d.ts
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+.vercel
+
+# ---------------------------------------------------------------- editors, OS, logs, tools
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+desktop.ini
+*.log
+.claude/
+ngrok.yml

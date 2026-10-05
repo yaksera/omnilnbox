@@ -1,0 +1,98 @@
+/** Public pages: login, sign up, two-factor, password reset, email confirmation, invitations, payment page, website chat widget. */
+const dict: Record<string, string> = {
+  // login / register / two-factor
+  "Back to login": "लग इनमा फर्कनुहोस्",
+  "Two-factor login": "दुई-चरण लग इन",
+  "Open your authenticator app (Google Authenticator, Authy, Microsoft Authenticator) and enter the 6-digit code for OmniInbox. Lost your phone? Enter one of your recovery codes.":
+    "आफ्नो authenticator एप (Google Authenticator, Authy, Microsoft Authenticator) खोल्नुहोस् र OmniInbox को 6 अंकको कोड हाल्नुहोस्। फोन हराएको छ? आफ्नो कुनै एउटा रिकभरी कोड हाल्नुहोस्।",
+  "Verify": "पुष्टि गर्नुहोस्",
+  "No account?": "खाता छैन?",
+  "Sign up": "साइन अप",
+  "Already have an account?": "पहिले नै खाता छ?",
+  "Log in": "लग इन",
+  "Welcome back": "फेरि स्वागत छ",
+  "Create your workspace": "आफ्नो वर्कस्पेस बनाउनुहोस्",
+  "Your name": "तपाईंको नाम",
+  "Company / workspace": "कम्पनी / वर्कस्पेस",
+  "Email": "इमेल",
+  "Password": "पासवर्ड",
+  "Forgot password?": "पासवर्ड बिर्सनुभयो?",
+  "Create account": "खाता बनाउनुहोस्",
+  "14-day Pro trial. No card needed.": "14 दिनको Pro ट्रायल। कार्ड चाहिँदैन।",
+
+  // forgot / reset password
+  "Remembered it?": "सम्झनुभयो?",
+  "Check your email": "आफ्नो इमेल हेर्नुहोस्",
+  "If an account exists for {email}, we've sent a link to choose a new password. It expires in 3 days. Check your spam folder too.":
+    "{email} को खाता छ भने, नयाँ पासवर्ड राख्ने लिङ्क पठाइएको छ। यो 3 दिनमा म्याद सकिन्छ। स्प्याम फोल्डर पनि हेर्नुहोस्।",
+  "Development mode (no email server set up):": "डेभलपमेन्ट मोड (इमेल सर्भर सेट गरिएको छैन):",
+  "open the reset link": "रिसेट लिङ्क खोल्नुहोस्",
+  "Forgot your password?": "पासवर्ड बिर्सनुभयो?",
+  "Enter your login email and we'll send you a link to choose a new one.": "लग इन गर्ने इमेल हाल्नुहोस्, हामी नयाँ पासवर्ड राख्ने लिङ्क पठाउँछौं।",
+  "Send reset link": "रिसेट लिङ्क पठाउनुहोस्",
+  "The two passwords don't match.": "दुवै पासवर्ड मिलेनन्।",
+  "Password changed": "पासवर्ड परिवर्तन भयो",
+  "For your security we logged you out on every device. Log in with your new password.":
+    "तपाईंको सुरक्षाका लागि सबै डिभाइसबाट लग आउट गरिएको छ। नयाँ पासवर्डले लग इन गर्नुहोस्।",
+  "Choose a new password": "नयाँ पासवर्ड राख्नुहोस्",
+  "Open this page from the link in your email.": "यो पेज आफ्नो इमेलमा आएको लिङ्कबाट खोल्नुहोस्।",
+  "New password": "नयाँ पासवर्ड",
+  "Repeat new password": "नयाँ पासवर्ड फेरि लेख्नुहोस्",
+  "At least 8 characters, not too common, not only numbers.": "कम्तीमा 8 अक्षर, धेरै सामान्य नहोस्, अंक मात्र नहोस्।",
+  "Get a new link": "नयाँ लिङ्क लिनुहोस्",
+  "Save new password": "नयाँ पासवर्ड सेभ गर्नुहोस्",
+
+  // verify email
+  "Email confirmed": "इमेल पुष्टि भयो",
+  "{email} is confirmed. Thanks!": "{email} पुष्टि भयो। धन्यवाद!",
+  "Go to OmniInbox": "OmniInbox मा जानुहोस्",
+  "Link not valid": "लिङ्क मान्य छैन",
+  "Invalid link": "लिङ्क मान्य छैन।",
+  "Log in and click \"Resend\" on the yellow banner to get a new link.": "नयाँ लिङ्क पाउन लग इन गरेर पहेँलो ब्यानरमा \"फेरि पठाउनुहोस्\" थिच्नुहोस्।",
+
+  // invitation
+  "Invalid invitation": "निमन्त्रणा मान्य छैन",
+  "Couldn't accept the invitation": "निमन्त्रणा स्वीकार गर्न सकिएन",
+  "Join {workspace}": "{workspace} मा जोडिनुहोस्",
+  "You've been invited as {role} with {email}.": "तपाईंलाई {email} मार्फत {role} को रूपमा निमन्त्रणा गरिएको छ।",
+  "Your OmniInbox password": "तपाईंको OmniInbox पासवर्ड",
+  "Choose a password": "पासवर्ड राख्नुहोस्",
+  "Accept invitation": "निमन्त्रणा स्वीकार गर्नुहोस्",
+
+  // payment page (seen by the shop's customers)
+  "Pay with Khalti": "Khalti बाट तिर्नुहोस्",
+  "Pay with eSewa": "eSewa बाट तिर्नुहोस्",
+  "This payment link is not valid.": "यो भुक्तानी लिङ्क मान्य छैन।",
+  "Couldn't start the payment": "भुक्तानी सुरु गर्न सकिएन",
+  "Order {order}": "अर्डर {order}",
+  "Delivery": "डेलिभरी",
+  "Discount": "छुट",
+  "Total to pay": "जम्मा तिर्नुपर्ने",
+  "Payment received. Thank you!": "भुक्तानी प्राप्त भयो। धन्यवाद!",
+  "{shop} has been notified and will prepare your order.": "{shop} लाई जानकारी दिइएको छ, उहाँहरूले तपाईंको अर्डर तयार गर्नुहुनेछ।",
+  "The payment wasn't completed. You can try again.": "भुक्तानी पूरा भएन। तपाईं फेरि प्रयास गर्न सक्नुहुन्छ।",
+  "test": "टेस्ट",
+  "Online payment isn't available for this order. Please contact {shop}.": "यो अर्डरका लागि अनलाइन भुक्तानी उपलब्ध छैन। कृपया {shop} लाई सम्पर्क गर्नुहोस्।",
+  "Secure payment. You pay {shop} directly through Khalti / eSewa.": "सुरक्षित भुक्तानी। तपाईंले Khalti / eSewa मार्फत सिधै {shop} लाई तिर्नुहुन्छ।",
+  "Powered by OmniInbox": "OmniInbox द्वारा सञ्चालित",
+
+  // website chat widget (seen by the shop's customers)
+  "You're sending messages too quickly. Please wait a moment.": "तपाईं धेरै छिटो म्यासेज पठाउँदै हुनुहुन्छ। कृपया एकछिन पर्खनुहोस्।",
+  "This chat is not available.": "यो च्याट उपलब्ध छैन।",
+  "Couldn't send": "पठाउन सकिएन",
+  "Files can be at most 5 MB.": "फाइल बढीमा 5 MB सम्म हुन सक्छ।",
+  "Please wait a moment.": "कृपया एकछिन पर्खनुहोस्।",
+  "Couldn't send the file": "फाइल पठाउन सकिएन",
+  "We're online": "हामी अनलाइन छौं",
+  "We'll reply soon": "हामी छिट्टै जवाफ दिन्छौं",
+  "Close chat": "च्याट बन्द गर्नुहोस्",
+  "File": "फाइल",
+  "Please tell us your name and phone so we can help you.": "तपाईंलाई मद्दत गर्न कृपया आफ्नो नाम र फोन नम्बर दिनुहोस्।",
+  "Leave your name and phone so we can reach you (optional).": "हामीले सम्पर्क गर्न सकौं भनेर आफ्नो नाम र फोन नम्बर छोड्नुहोस् (ऐच्छिक)।",
+  "Phone (98XXXXXXXX)": "फोन (98XXXXXXXX)",
+  "Start chat": "च्याट सुरु गर्नुहोस्",
+  "Send a photo": "फोटो पठाउनुहोस्",
+  "Send a photo or PDF (max 5 MB)": "फोटो वा PDF पठाउनुहोस् (बढीमा 5 MB)",
+  "Type your message…": "आफ्नो म्यासेज लेख्नुहोस्…",
+};
+export default dict;
